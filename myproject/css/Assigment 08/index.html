@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+    <style>
+        section {
+            width: 200px;
+            height: 150px;
+            background-color: #4d1da7;
+            border-radius: 30%;
+            animation-name: testOne;
+            animation-duration: 5s;
+            position: relative;
+            animation-iteration-count: infinite;
+
+        }
+
+        @keyframes testOne {
+            0% {
+                left: 0;
+                top: 0;
+            }
+            25% {
+                left: 700px;
+                top: 0;
+                transform: rotate(360deg);
+            }
+            50% {
+                left: 700px;
+                top: 400px;
+            }
+            75% {
+                left: 0;
+                top: 400px;
+            }
+            100% {
+                left: 0;
+                top: 0px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+<section>
+
+</section>
+</body>
+</html>

@@ -63,3 +63,6 @@ main>section:nth-child(1){
     height: 500px;
     background: #ff253a;
 }
+main>section:nth-child(1)>div{
+    height: 500px;
+}
