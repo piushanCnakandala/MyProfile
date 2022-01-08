@@ -2,10 +2,11 @@
 /*header creating*/
 body>header{
     position: relative;
-    height: 80px;
+    height: 50px;
     z-index: 1;
     display: flex;
     justify-content: left;
+    background: darkgray;
 }
 
 header > nav > ul {
@@ -58,11 +59,93 @@ header > nav > ul > li:nth-child(7) {
     left: 0;
 }
 
-/*home page creating*/
+           /*-------home page creating---------*/
 main>section:nth-child(1){
-    height: 500px;
-    background: #ff253a;
+    height: 100vh;
+    position: relative;
+    border:2px solid red;
+
 }
-main>section:nth-child(1)>div{
-    height: 500px;
+main>section:nth-child(1)>img{
+    right: 0;
+    position: absolute;
+    height: 754px;
+    width: 600px;
+    top: 0;
+}
+
+main>section:nth-child(1)>div>div>div{
+    left: 150px;
+    top: 150px;
+}
+
+main>section:nth-child(1)>div>div:nth-child(1)>h1{
+    font-size: 9em;
+    position: absolute;
+    color: #3a483b;
+
+   left: 150px;
+    top: 150px;
+}
+main>section:nth-child(1)>div>div:nth-child(1)>h2{
+    font-size: 3em;
+    position: absolute;
+    left: 300px;
+    top: 230px;
+    animation-name: iam_animtion;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    color: white;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes iam_animtion {
+    from{
+        color: white;
+    }
+    to{
+       color: black;
+    }
+}
+
+main>section:nth-child(1)>div>div:nth-child(1)>h3{
+    font-size: 3em;
+    position: absolute;
+    left: 300px;
+    top: 265px;
+    animation-name: piushanCnakndala;
+    animation-duration: 4s;
+    animation-delay: 5s;
+    color: white;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes piushanCnakndala {
+    from{
+        color: white;
+    }
+    to{
+        color: black;
+    }
+}
+
+main>section>div>div>div>a{
+    all: initial;
+
+}
+.align{
+    display: flex;
+    width: 400px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.icons{
+    width: 50px;
+    position: absolute;
+    top: 450px;
+
+
 }
