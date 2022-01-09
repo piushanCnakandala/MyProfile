@@ -6,7 +6,7 @@ body>header{
     z-index: 1;
     display: flex;
     justify-content: left;
-    background: darkgray;
+    background: #F2EFEF;
 }
 
 header > nav > ul {
@@ -64,6 +64,7 @@ main>section:nth-child(1){
     height: 100vh;
     position: relative;
     border:2px solid red;
+
 
 }
 main>section:nth-child(1)>img{
@@ -148,4 +149,238 @@ main>section>div>div>div>a{
     top: 450px;
 
 
+}
+
+/*--------------about-------*/
+
+.side{
+    height: 100vh;
+    position: relative;
+    border:2px solid red;
+   background: #F2EFEF;
+
+}
+
+
+main>section:nth-child(2)>div:nth-child(1){
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 220px;
+}
+
+#p\.photo{
+    height: 320px;
+    width: 300px;
+    border-radius: 100%;
+    position: absolute;
+
+}
+.title{
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    left: 10px;
+    position: relative;
+}
+
+
+#PersonalDeatils{
+    font-weight: bold;
+    font-size: 2em;
+    color: darkolivegreen;
+}
+#EductionDeatils{
+    font-weight: bold;
+    font-size: 2em;
+    color: darkolivegreen;
+}
+main>section:nth-child(2)>div:nth-child(3){
+    position: relative;
+    display: flex;
+justify-content: space-between;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+#PersonalInformation{
+
+}
+main>section:nth-child(2)>div:nth-child(4){
+    position: relative;
+    left: 100px;
+
+}
+
+main>section:nth-child(2)>div:nth-child(5){
+    width: 300px;
+    height: 80px;
+    border-radius: 20px;
+    background: white;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    left: 100px;
+    top: 100px;
+
+}
+main>section:nth-child(2)>div:nth-child(5)>img{
+    width:70px;
+    height:70px;
+    border-radius: 100%;
+}
+main>section:nth-child(2)>div:nth-child(5)>h1{
+    position: relative;
+    font-size: 30px;
+
+}
+
+main>section:nth-child(2)>div:nth-child(6){
+    position: relative;
+     margin-left: 1200px;
+   margin-bottom: 1000px;
+}
+#big{
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    top: -100px;
+    border: 4px solid #000000;
+    transform: rotate(90deg);
+}
+#short{
+    position: absolute;
+    left: 7.65%;
+    right: 88.1%;
+    top: 15.51%;
+    border: 4px solid #000000;
+    transform: rotate(180deg);
+}
+#circle{
+    border: 3px;
+    position: absolute;
+    width: 36px;
+    height: 33px;
+    left: 128px;
+    top: -100px;
+    border-radius: 20px;
+    background: black;
+}
+
+/*--------------activities-------------*/
+.box{
+    width: 1350px;
+    height: 500px;
+    background: #565656;
+    position: absolute;
+    justify-content: center;
+    left: 80px;
+    border-radius: 40px;
+    opacity: 10%;
+}
+.viewBox{
+    position:relative;
+    display: flex;
+    width: 1220px;
+    height: 400px;
+   justify-content:space-between;
+    left: 10px;
+    right: 400px;
+    margin: auto;
+    top: 50px;
+}
+/*---------skils----------*/
+main>section:nth-child(4)>div:nth-child(2){
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    position: absolute;
+    justify-content: center;
+    left: 500px;
+    top: 65px;
+}
+#java{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 266px;
+    top: 44px;
+}
+
+#mysql{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 460px;
+    top: 159px;
+}
+#new{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 453px;
+    top: 355px;
+}
+#css{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+#newone{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}
+#newtw0{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 278px;
+    top: 483px;
+}
+
+#newthree{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 107px;
+    top: 449px;
+}
+
+#newone{
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    position: absolute;
+    left: 27px;
+    top: 270px;
+}
+
+main>section:nth-child(4)>div:nth-child(2):hover{
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: all 3s;
+}
+#imgtwo{
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    position: absolute;
+    left: 203px;
+    top: 200px;
+}
+#profiletwo:hover{
+    transform: rotate(-360deg);
+    transition: all 3s;
 }
