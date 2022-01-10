@@ -384,3 +384,373 @@ main>section:nth-child(4)>div:nth-child(2):hover{
     transform: rotate(-360deg);
     transition: all 3s;
 }
+
+.chatBox{
+    width: 550px;
+    height: 500px;
+    background: #565656;
+    position: absolute;
+    justify-content: center;
+    left: 80px;
+    border-radius: 40px;
+    opacity: 10%;
+}
+#setBorder1{
+    position: relative;
+    left: 248px;
+    top: -367px;
+    border-radius: 10px;
+
+}
+
+#setBorder2{
+    position: relative;
+    left: 580px;
+    top: -735px;
+    border: black 2px;
+    border-radius: 10px;
+}
+
+.callAndChat {
+    position: relative;
+    width: 200px;
+    height: 350px;
+    background: white;
+    border-radius: 20px;
+    left: 500px;
+    border: 10px solid black;
+}
+.AndChat{
+    position: relative;
+    width: 200px;
+    height: 350px;
+    background: white;
+    border: 10px solid black;
+    left: 500px;
+}
+#mobileNumber{
+    position: relative;
+    left: 784px;
+    top: -734px;
+}
+#emails{
+    position: relative;
+    left: 1100px;
+    top: -796px;
+}
+#imgCl{
+    width: 183px;
+    height: 296px;
+    left: 10px;
+    position: relative;
+    top: 25px;
+    border-radius: 10px;
+
+}
+#imgMail{
+    width: 183px;
+    height: 296px;
+    left: 10px;
+    position: relative;
+    top: 25px;
+    border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+#contactsView > div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#contactsView > div > h1 {
+    position: relative;
+    font-size: 62px;
+}
+
+#contactEmail {
+    position: relative;
+    height: 197px;
+    width: 291px;
+    left: 55px;
+    background-color: #1d33ab;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+#contactCall {
+    position: relative;
+    top: -197px;
+    height: 197px;
+    width: 356px;
+    left: 370px;
+    background-color: #1d33ab;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+}
+
+#contactCall > h2 {
+    position: relative;
+    font-size: 42px;
+    top: 1px;
+    left: 65px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#contactCall > h3 {
+    position: relative;
+    font-size: 33px;
+    top: 48px;
+    left: -74px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: cornflowerblue;
+}
+
+#contactCall > i {
+    position: relative;
+    font-size: 42px;
+    top: -46px;
+    left: 125px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#contactEmail > h2 {
+    position: relative;
+    font-size: 42px;
+    top: -4px;
+    left: 116px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#contactEmail > h3 {
+    position: relative;
+    font-size: 16px;
+    top: 48px;
+    left: -74px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: cornflowerblue;
+}
+
+#contactEmail > i {
+    position: relative;
+    font-size: 42px;
+    top: -46px;
+    left: 191px;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+
+#contactFootprint {
+    position: relative;
+    display: flex;
+    top: -151px;
+    height: 214px;
+    width: 677px;
+    top: -151px;
+    height: 214px;
+    width: 677px;
+    left: 55px;
+    background-color: #1d33ab;
+    justify-content: space-evenly;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+
+}
+
+
+#contactFootprint a > img {
+    position: relative;
+    bottom: 0;
+    left: -3px;
+    right: 0;
+    top: 43px;
+    width: 40px;
+    margin: 35px;
+    cursor: pointer;
+}
+
+#contactFootprint > h2 {
+    font-size: 36px;
+    position: absolute;
+    bottom: 4px;
+    left: 81px;
+    top: 18px;
+/width: 50px;/
+margin: 25px;
+    /*    background-color: black;*/
+}
+
+#contactFootprint > h2 > span {
+    color: blue;
+}
+
+#contactDetails {
+    position: absolute;
+    height: 624px;
+    width: 1000px;
+    right: -335px;
+    top: -610px;
+    bottom: 0;
+    margin: auto;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    background-color: #1d33ab;
+
+}
+
+#send-btn {
+    position: relative;
+    width: 139px;
+    height: 65px;
+    border: 5px solid #1d33ab;
+    background-color: transparent;
+    border-radius: 68px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    line-height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 861px;
+    margin-top: 764px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #1d33ab;
+}
+
+/*  #send-btn > span {
+      !* text-transform: uppercase;*!
+      position: relative;
+      right: 30px;
+      letter-spacing: 2px;
+  }
+
+  #send-btn > div {
+      position: absolute;
+      width: 72px;
+      height: 72px;
+      background-color: #1d33ab;
+      border-radius: 100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      !* margin-right: -1px; *!
+  }*/
+
+#send-btn svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-left: 19px;
+}
+
+#contactBtnDiv {
+    position: relative;
+    margin: auto;
+    left: 134px;
+    width: 161px;
+    top: -50px;
+
+}
+
+#contactBtn {
+    width: 128px;
+    height: 38px;
+    background-color: white;
+    box-shadow: -1px 2px 16px #1d33ab;
+    border-radius: 15px;
+    position: relative;
+    font-weight: bold;
+    font-size: 17px;
+    color: black;
+    border: 0;
+    font-family: 'Saira Condensed', sans-serif;
+    left: -437px;
+    top: 59px;
+}
+
+#contactBtn:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#chatBox {
+    position: absolute;
+    height: 673px;
+    width: 1000px;
+    left: 390px;
+    top: -610px;
+    bottom: 0;
+    margin: auto;
+    border-radius: 19px;
+    box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+    /* background-color: #1d33ab;*/
+}
+
+.lbl {
+    left: 35px;
+    color: black;
+    margin-top: 31px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.inp {
+    width: 392px;
+    height: 26px;
+    font-size: 26px;
+    background: white;
+    border-radius: 20px;
+}
+
+.inp2 {
+    border: 4px solid black;
+    width: 389px;
+    font-size: -134px;
+    border-radius: 20px;
+    padding: unset;
+    margin: unset;
+}
+#setChatbox{
+    position: relative;
+    left: 100px;
+    top: 31px;
+}
