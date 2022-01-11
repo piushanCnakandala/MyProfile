@@ -133,15 +133,17 @@ main>section:nth-child(1)>div>div:nth-child(1)>h3{
     }
 }
 
-main>section>div>div>div>a{
+main>section>div:nth-child(2)>a{
     all: initial;
 
 }
 .align{
     display: flex;
-    width: 400px;
+    width: 401px;
     margin: auto;
     justify-content: space-evenly;
+    position: relative;
+    left: -348px;
 }
 .icons{
     width: 50px;
@@ -779,3 +781,53 @@ footer>section{
     top: 286px;
 }
 
+
+
+.assiBox{
+    position:relative;
+    display: flex;
+    width: 1220px;
+    height: 400px;
+    justify-content:space-between;
+    left: 10px;
+    right: 400px;
+    margin: auto;
+    top: 87px;
+}
+
+.github{
+    position: relative;
+    left: 1366px;
+    height: 45px;
+    width: 47px;
+    top: -1203px;
+}
+.linkdin{
+    position: relative;
+    left: 1366px;
+    height: 45px;
+    width: 47px;
+    top: -1203px;
+}
+
+.facebook{
+    position: relative;
+    left: 1366px;
+    height: 45px;
+    width: 47px;
+    top:-1198px ;
+}
+.instergram{
+    position: relative;
+    left: 1366px;
+    height: 45px;
+    width: 47px;
+    top: -1143px;
+}
+.twiter{
+    position: relative;
+    left: 1366px;
+    height: 45px;
+    width: 47px;
+    top: -1246px;
+}
