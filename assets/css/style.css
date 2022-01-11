@@ -739,6 +739,7 @@ margin: 25px;
     font-size: 26px;
     background: white;
     border-radius: 20px;
+    border: 4px solid black;
 }
 
 .inp2 {
@@ -754,3 +755,27 @@ margin: 25px;
     left: 100px;
     top: 31px;
 }
+
+
+/*---------footer-----------*/
+footer>section{
+    height: 50vh;
+    position: relative;
+    border:2px solid red;
+    background: #F2EFEF;
+}
+
+#footerImage{
+    height: 200px;
+    width: 190px;
+    border-radius: 100%;
+    position: absolute;
+    left: 609px;
+    top: 70px;
+}
+#allRight{
+    position: absolute;
+    left: 399px;
+    top: 286px;
+}
+
