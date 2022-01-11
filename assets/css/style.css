@@ -59,14 +59,18 @@ header > nav > ul > li:nth-child(7) {
     left: 0;
 }
 
+*{
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,
+Ubuntu,Cantarell,"Open Sans","Helvetica Neue",SansSerif;
+    scroll-behavior: smooth;
+}
+
            /*-------home page creating---------*/
 main>section:nth-child(1){
     height: 100vh;
     position: relative;
-    border:2px solid red;
-
-
 }
+
 main>section:nth-child(1)>img{
     right: 0;
     position: absolute;
@@ -158,7 +162,7 @@ main>section>div:nth-child(2)>a{
 .side{
     height: 100vh;
     position: relative;
-    border:2px solid red;
+    border:2px solid #F2EFEF;
    background: #F2EFEF;
 
 }
@@ -291,6 +295,16 @@ main>section:nth-child(2)>div:nth-child(6){
     margin: auto;
     top: 50px;
 }
+
+.activitiesImg{
+    position: relative;
+    height: 337px;
+    border-radius: 15px;
+}
+.viewBox :hover{
+    transform: scale(1.2)
+}
+
 /*---------skils----------*/
 main>section:nth-child(4)>div:nth-child(2){
     width: 600px;
@@ -725,6 +739,13 @@ margin: 25px;
     box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
     /* background-color: #1d33ab;*/
 }
+.projectimg{
+    width: 382px;
+    height: 271px;
+    top: 52px;
+    position: relative;
+    border-radius: 15px;
+}
 
 .lbl {
     left: 35px;
@@ -802,17 +823,29 @@ footer>section{
     position: relative;
     left: 221px;
     top: -383px;
+
+}
+#Assigment01 :hover{
+    transform: scale(1.2)
 }
 #Assigment02{
     position: absolute;
     left:656px;
     top: 133px;
+
+}
+#Assigment02 :hover{
+    transform: scale(1.2)
 }
 #Assigment03{
     position: absolute;
     left: 1084px;
     top: 128px;
 
+
+}
+#Assigment03 :hover{
+    transform: scale(1.2)
 }
 
 .github{
