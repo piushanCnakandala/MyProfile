@@ -794,6 +794,26 @@ footer>section{
     margin: auto;
     top: 87px;
 }
+.assiImg{
+    width: 357px;
+    height: 283px;
+}
+#Assigment01{
+    position: relative;
+    left: 221px;
+    top: -383px;
+}
+#Assigment02{
+    position: absolute;
+    left:656px;
+    top: 133px;
+}
+#Assigment03{
+    position: absolute;
+    left: 1084px;
+    top: 128px;
+
+}
 
 .github{
     position: relative;
