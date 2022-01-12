@@ -805,7 +805,7 @@ margin: 25px;
 footer>section{
     height: 50vh;
     position: relative;
-    border:2px solid red;
+    border:2px #F2EFEF;
     background: #F2EFEF;
 }
 

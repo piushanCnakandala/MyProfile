@@ -3,33 +3,33 @@
 ## :rocket: **Overview Of My Profile**
 
 - **Home Section**
-  ![Home Section Img](assets/image/screenshot/home.png)
+  ![Home Section Img](assets/image/home.png)
 
 - **About Section**
-  ![About Me Section Img](assets/image/screenshot/about.png)
+  ![About Me Section Img](assets/image/about.png)
 
 - **Skills Section**
-  ![My Skill Section Img](assets/image/screenshot/skills.png)
+  ![My Skill Section Img](assets/image/skills.png)
 
 - **Projects Section**
-  ![My Skill Section Img](assets/image/screenshot/project.png)
+  ![My Skill Section Img](assets/image/projects.png)
 
 - **Assignments Section**
-  ![My Skill Section Img](assets/image/screenshot/assignments.png)
+  ![My Skill Section Img](assets/image/assigments.png)
 
-- **Hobbies Section**
-  ![My Skill Section Img](assets/image/screenshot/hobbies.png)
+- **Activities Section**
+  ![My Skill Section Img](assets/image/acctivities.png)
 
 - **Contacts Section**
-  ![My Skill Section Img](assets/image/screenshot/contacts.png)
+  ![My Skill Section Img](assets/image/contact.png)
 
   **Footer Section**
-  ![My Skill Section Img](assets/image/screenshot/footer.png)
+  ![My Skill Section Img](assets/image/footer.png)
 
 ## :link: **Links**
 
-- Website : [Click Here](https://prathibha2021.000webhostapp.com/)
-- GitHub-Pages : [Click Here](https://ranger-hk.github.io/MyProfile/)
-- Site Map : [Click Here](https://www.gloomaps.com/QotefJggVd)
-- Wireframe : [Click Here](https://wireframe.cc/in2M1b)
-- Mockup : [Click Here](https://www.figma.com/file/VaAoHYqNt2DZFkayVIlHoE/My-Web?node-id=0%3A1)
+- Website : [Click Here](https://piushancnakandala.000webhostapp.com/)
+- GitHub-Pages : [Click Here](https://github.com/piushanCnakandala/MyProfile)
+- Site Map : [Click Here](https://www.gloomaps.com/dYxvknelTE)
+- Wireframe : [Click Here](https://wireframe.cc/iMdDaK)
+- Mockup : [Click Here](https://www.figma.com/file/hXsyaQkWexRcJbWWupjvuV/Untitled?node-id=0%3A1)
