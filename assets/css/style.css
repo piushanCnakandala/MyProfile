@@ -184,7 +184,7 @@ main>section:nth-child(2)>div:nth-child(1){
 }
 .title{
     font-weight: bold;
-    font-family: 'Lobster', cursive;
+    font-family: 'Saira Condensed', sans-serif;
     font-size: 3em;
     left: 10px;
     position: relative;
@@ -210,6 +210,8 @@ justify-content: space-between;
 
 }
 #PersonalInformation{
+    font-size: 1em;
+    font-weight: bold;
 
 }
 main>section:nth-child(2)>div:nth-child(4){
@@ -305,6 +307,25 @@ main>section:nth-child(2)>div:nth-child(6){
     transform: scale(1.2)
 }
 
+
+#activities01{
+    position: relative;
+    left: 178px;
+    top:16px
+}
+
+#activities02{
+    position: absolute;
+    left: 687px;
+    top: 533px;
+}
+
+#activities03{
+    position: absolute;
+    left: 1163px;
+    top: 530px;
+
+}
 /*---------skils----------*/
 main>section:nth-child(4)>div:nth-child(2){
     width: 600px;
