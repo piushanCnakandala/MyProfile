@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PiushanCnakandala</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <style>
+    main{
+      width: 700px;
+      height: 400px;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      margin: auto;
+      overflow-x: scroll;
+      overflow: hidden;
+    }
+    main>section{
+      width: 400%;
+      height: 100%;
+      display: flex;
+      animation-name: slideMe;
+      animation-duration: 10s;
+      animation-direction: alternate;
+      animation-iteration-count:infinite;
+
+    }
+
+    main>section>div{
+      width: 100%;
+    }
+
+    main>section>div:nth-child(1){
+      background: url("assets/img/land 1.jpg");
+      background-size: cover;
+      position: center;
+    }
+    main>section>div:nth-child(2){
+      background: url("assets/img/land 2.jpg");
+      background-size: cover;
+      position: center;
+    }
+    main>section>div:nth-child(3){
+      background: url("assets/img/land 3.jpg");
+      background-size: cover;
+      position: center;
+    }
+    main>section>div:nth-child(4){
+      background: url("assets/img/land 4.jpg");
+      background-size: cover;
+      position: center;
+    }
+    @keyframes slideMe{
+      0%,{
+          transform: translateX(0);
+      }
+    25%{
+      transform: translateX(-25%);
+    }
+      50%{
+        transform: translateX(-50%);
+      }
+      100%{
+        transform: translateX(-75%);
+             }
+    }
+
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </section>
+</main>
+
+</body>
+</html>
