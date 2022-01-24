@@ -29,20 +29,12 @@
             </ul>
 
             <ul class="navbar-nav">
-                <a class="navbar-brand" href="#">
-                    <img alt="" class="d-inline-block align-text-top" height="24" src="assets/img/icons8-exit-sign-48.png"
-                         width="30">
-                </a>
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#">Sign Up</a>
-                </li>
+
                 <a class="navbar-brand" href="#">
                     <img alt="" class="d-inline-block align-text-top" height="24" src="assets/img/icons8-log-out-64.png"
                          width="30">
                 </a>
-                <li class="nav-item">
-                    <a aria-current="page" class="nav-link active" href="#">Log out</a>
-                </li>
+                <button class="btn btn-dark" type="button">LogOut</button>
             </ul>
 
         </div>
@@ -59,7 +51,7 @@
     <!--title  -->
     <div>
         <img alt="=" class="img-fluid" height="30" src="assets/img/icons8-customer-128.png" width="40">
-        Customer
+        <h1 class="fw-bold fs-4">Customer</h1>
     </div>
 
     <!--search bar-->
@@ -67,16 +59,16 @@
     <section class="row">
         <div class="col-8 bg-info">
             <div class="mb-3">
-                <label class="form-label">Search Customer</label>
+                <label class="form-label fw-bold ">Search Customer</label>
                 <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="id">
             </div>
             <button class="btn btn-dark" type="button">Search</button>
         </div>
-        <div class="col">
+        <div class="col g-5">
             <button class="btn btn-secondary" type="button">Add New Customer</button>
             <button class="btn btn-dark" type="button">View All Customers</button>
         </div>
-        <div class="col-12 ">
+        <div class="col-12 g-5 ">
             <button class="btn btn-danger" type="button">Delete</button>
             <button class="btn btn-dark" type="button">Details</button>
             <button class="btn btn-success" type="button">Clear</button>
@@ -84,9 +76,9 @@
 
     </section>
     <section class="row">
-        <div class="col">
-            <table class="table">
-                <thead>
+        <div class="col g-2">
+            <table class= "table table-bordered">
+                <thead class="table-info">
                 <tr>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Age</th>
