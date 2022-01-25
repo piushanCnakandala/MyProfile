@@ -89,14 +89,114 @@
         </div>
       </div>
     </div>
+    <!--Item select-->
     <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      <div class="p-3 border bg-light">
+        <span class="d-block p-2 bg-info text-white">Item Select</span>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <label for="idCmb" class="form-label fw-bold">Item:</label>
+              <select class="form-select" id="">
+                <option selected>I001</option>
+                <option value="1">I001</option>
+                <option value="2">I002</option>
+                <option value="3">I003</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="itemName" class="form-label fw-bold">Item Name:</label>
+              <input type="text" class="form-control" id="itemName" placeholder="Book">
+            </div>
+          </div>
+          <div class="row mt-3">
+
+            <div class="col">
+              <label for="qtyOnHand" class="form-label fw-bold">Qty On Hand:</label>
+              <input type="number" class="form-control" id="qtyOnHand" placeholder="1">
+            </div>
+            <div class="col">
+              <label for="price" class="form-label fw-bold">Price:</label>
+              <input type="text" class="form-control" id="price" placeholder="100">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <label for="oQty" class="form-label fw-bold">Order Quantity:</label>
+              <input type="number" class="form-control" id="oQty" placeholder="1">
+            </div>
+          </div>
+          <div class="row mt-3 mb-1">
+            <button type="button" class="btn btn-dark">Add Item</button>
+          </div>
+        </div>
+      </div>
+      </div>
+
+
+
+    <div class="col">
+      <div class="p-3 border bg-light">
+        <h1 class="fw-bold fs-4">Total : 1000Rs/=</h1>
+        <h1 class="fw-bold fs-4">SubTotal : 900Rs/=</h1>
+        <div class="row mt-3">
+
+          <div class="col">
+            <label for="cash" class="form-label fw-bold">Cash:</label>
+            <input type="text" class="form-control" id="cash" placeholder="5000">
+          </div>
+          <div class="col">
+            <label for="dis" class="form-label fw-bold">Discount:</label>
+            <input type="number" class="form-control" id="dis" placeholder="10">
+          </div>
+        </div>
+        <div class="row mt-3">
+
+          <div class="col">
+            <label for="cash" class="form-label fw-bold">Balance:</label>
+            <input type="text" class="form-control" id="cash" placeholder="3200">
+          </div>
+        </div>
+        <div class="row mt-3 mb-1">
+          <button type="button" class="btn btn-success">Purchase</button>
+        </div>
+      </div>
     </div>
-    <div class="col">
-      <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
   </div>
   </div>
 </div>
+
+<!--table-->
+<main class="container">
+  <section class="row">
+    <div class="col g-2">
+      <table class= "table table-bordered">
+        <thead class="table-info">
+        <tr>
+          <th scope="col">Item Code</th>
+          <th scope="col">Item Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>0001</td>
+          <td>Book</td>
+          <td>100</td>
+          <td>1</td>
+          <td>100</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+</main>
+
 
 
 <script crossorigin="anonymous"
