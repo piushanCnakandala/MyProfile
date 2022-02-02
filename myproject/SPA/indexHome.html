@@ -58,21 +58,52 @@
         <!--search bar-->
 
         <section class="row">
-            <div class="col-8 bg-info">
-                <div class="mb-3">
+            <div class="col-12 bg-info">
+                <div class="mb-2">
                     <label class="form-label fw-bold ">Search Customer</label>
                     <input aria-describedby="emailHelp" class="form-control" id="exampleInputEmail1" type="id">
                 </div>
                 <button class="btn btn-dark" type="button">Search</button>
+
+
+                <div class="col  mb-2>
+                    <div class="p-2  ">
+                        <span class="d-block p-2 bg-info text-white">Add Customer</span>
+
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label fw-bold" for="itemName">Customer Name:</label>
+                                    <input class="form-control" id="customerName" placeholder="" type="">
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label fw-bold" for="itemName">Age:</label>
+                                    <input class="form-control" id=customerAge" placeholder="" type="">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+
+                                <div class="col">
+                                    <label class="form-label fw-bold" for="qtyOnHand">TP:</label>
+                                    <input class="form-control" id="tp" placeholder="" type="">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label fw-bold" for="price">Salary:</label>
+                                    <input class="form-control" id="customerSalary" placeholder="" type="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="col g-5">
-                <button class="btn btn-secondary" type="button">Add New Customer</button>
-                <button class="btn btn-dark" type="button">View All Customers</button>
-            </div>
+           <!--buttons add,clear,delete-->
             <div class="col-12 g-5 ">
                 <button class="btn btn-danger" type="button">Delete</button>
                 <button class="btn btn-dark" type="button">Details</button>
                 <button class="btn btn-success" type="button">Clear</button>
+                <button class="btn btn-success" type="button">Add Customer</button>
             </div>
 
         </section>
@@ -366,11 +397,13 @@
     </section>
 
 </main>
-
+<script src="assets/jQuery/jQuery.js"></script>
 <script src="assets/js/script.js"></script>
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
 
+</script>
 </body>
 </html>
