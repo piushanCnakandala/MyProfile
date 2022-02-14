@@ -67,30 +67,30 @@
 
 
                 <div class="col  mb-2>
-                    <div class="p-2  ">
+                    <div class="p-2">
                         <span class="d-block p-2 bg-info text-white">Add Customer</span>
 
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col">
-                                    <label class="form-label fw-bold" for="itemName">Customer Name:</label>
-                                    <input class="form-control" id="customerName" placeholder="" type="">
+                                    <label   class="form-label fw-bold" for="itemName">Customer Name:</label>
+                                    <input  id="inputCname" class="form-control" id="customerName" placeholder="" type="">
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label class="form-label fw-bold" for="itemName">Age:</label>
-                                    <input class="form-control" id=customerAge" placeholder="" type="">
+                                    <input id="inputCage" class="form-control" id=customerAge" placeholder="" type="">
                                 </div>
                             </div>
                             <div class="row mt-3">
 
                                 <div class="col">
                                     <label class="form-label fw-bold" for="qtyOnHand">TP:</label>
-                                    <input class="form-control" id="tp" placeholder="" type="">
+                                    <input  id="inputTp"class="form-control" id="tp" placeholder="" type="">
                                 </div>
                                 <div class="col">
                                     <label class="form-label fw-bold" for="price">Salary:</label>
-                                    <input class="form-control" id="customerSalary" placeholder="" type="">
+                                    <input id="inputSalary" class="form-control" id="customerSalary" placeholder="" type="">
                                 </div>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                 <button class="btn btn-danger" type="button">Delete</button>
                 <button class="btn btn-dark" type="button">Details</button>
                 <button class="btn btn-success" type="button">Clear</button>
-                <button class="btn btn-success" type="button">Add Customer</button>
+                <button id="addCust" class="btn btn-success" type="button">Add Customer</button>
             </div>
 
         </section>
@@ -123,37 +123,8 @@
                         <th scope="col">Salary</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Kusal</td>
-                        <td>23</td>
-                        <td>07500000</td>
-                        <td>3000000</td>
-                    </tr>
-                    <tr>
-                        <td>lakamal</td>
-                        <td>23</td>
-                        <td>07500000</td>
-                        <td>3000000</td>
-                    </tr>
-                    <tr>
-                        <td>helitha</td>
-                        <td>23</td>
-                        <td>07500000</td>
-                        <td>3000000</td>
-                    </tr>
-                    <tr>
-                        <td>pasidu</td>
-                        <td>23</td>
-                        <td>07500000</td>
-                        <td>3000000</td>
-                    </tr>
-                    <tr>
-                        <td>jewaa</td>
-                        <td>23</td>
-                        <td>07500000</td>
-                        <td>3000000</td>
-                    </tr>
+                    <tbody id="customerTable">
+
                     </tbody>
                 </table>
             </div>
@@ -178,14 +149,44 @@
                 </div>
                 <button class="btn btn-dark" type="button">Search</button>
             </div>
-            <div class="col g-5">
-                <button class="btn btn-secondary" type="button">Add New Customer</button>
-                <button class="btn btn-dark" type="button">View All Customers</button>
+
+            <div class="col  mb-2>
+                    <div class="p-2">
+            <span class="d-block p-2 bg-info text-white">Add Item</span>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <label   class="form-label fw-bold" for="itemName">Item Name:</label>
+                        <input  id="inputItemName" class="form-control" id="itemName" placeholder="" type="">
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label fw-bold" for="itemName">Price:</label>
+                        <input id="inputPrice" class="form-control" id=itemPrice" placeholder="" type="">
+                    </div>
+                </div>
+                <div class="row mt-3">
+
+                    <div class="col">
+                        <label class="form-label fw-bold" for="qtyOnHand">Quantity:</label>
+                        <input  id="inputQuantity"class="form-control" id="itemQuantity" placeholder="" type="">
+                    </div>
+                    <div class="col">
+                        <label class="form-label fw-bold" for="price">Price:</label>
+                        <input id="inputData" class="form-control" id="itemData" placeholder="" type="">
+                    </div>
+                </div>
             </div>
+            </div>
+            </div>
+
+            <!--buttons add,clear,delete-->
             <div class="col-12 g-5 ">
                 <button class="btn btn-danger" type="button">Delete</button>
                 <button class="btn btn-dark" type="button">Details</button>
                 <button class="btn btn-success" type="button">Clear</button>
+                <button id="addItem" class="btn btn-success" type="button">Add Item</button>
             </div>
 
         </section>
@@ -397,6 +398,7 @@
     </section>
 
 </main>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script src="assets/jQuery/jQuery.js"></script>
 <script src="assets/js/script.js"></script>
 <script crossorigin="anonymous"
