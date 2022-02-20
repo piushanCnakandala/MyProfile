@@ -20,10 +20,13 @@ $("#addCust").click(function () {
     customerDB.push(customerOB);
     loadAllCustomer();
 
+/*
 
 //clear input text fiels
 $("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
+*/
 
+    clearFields();
 
 //return data to the text fields
     $("#customerTable>tr").click(function () {
@@ -65,7 +68,7 @@ $("#inputTp").keydown(function (event) {
     }
 });
 
-
+//input data to table
 function loadAllCustomer(){
     $("#customerTable").empty();
 for(var i of customerDB){
@@ -74,9 +77,38 @@ for(var i of customerDB){
 }
 }
 
-//input data to table
+//search customer
 
+$("#btnCustomerSearch").click(function (){
+var searchId=$("#txtCustomerSearch").val();
+var response=searchCustomer(searchId);
+if(response){
+    $("#inputCname").val(response.id);
+    $("#inputCage").val(response.name);
+    $("#inputTp").val(response.age);
+    $("#inputSalary").val(response.tp);
 
+}else {
+    clearFields();
+    alert("no such a customer");
+
+}
+});
+
+function searchCustomer(id){
+    for(let i =0;i<customerDB.length;i++){
+        if(customerDB[i].id==id){
+            return customerDB[i];
+
+        }
+
+    }
+}
+
+//clear input text fiels
+function clearFields(){
+    $("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
+}
 
 
 
