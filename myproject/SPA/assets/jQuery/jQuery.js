@@ -4,13 +4,23 @@
 $("#addCust").click(function () {
     $("#customerTable>tr").off("click"); //of click events
 
-    let customerName = $("#inputCname").val();
-    let customerAge = $("#inputCage").val();
-    let customerTp = $("#inputTp").val();
-    let customerSalary = $("#inputSalary").val();
+    let customerId = $("#inputCname").val();
+    let customerName = $("#inputCage").val();
+    let customerAge = $("#inputTp").val();
+    let customerTp = $("#inputSalary").val();
+
+   //input data to array
+    var customerOB={
+        id:customerId,
+        name:customerName,
+        age:customerAge,
+        tp:customerTp
+
+    };
+    customerDB.push(customerOB);
 
 //input data to table
-    let raw = `<tr><td>${customerName}</td><td>${customerAge}</td><td>${customerTp}</td><td>${customerSalary}</td></tr>`
+    let raw = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAge}</td><td>${customerTp}</td></tr>`
     $("#customerTable").append(raw);
 
 //clear input text fiels
@@ -19,16 +29,16 @@ $("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
 
 //return data to the text fields
     $("#customerTable>tr").click(function () {
-        let customerName = $(this).children(":eq(0)").text();
-        let customerAge = $(this).children(":eq(1)").text();
-        let customerTp = $(this).children(":eq(2)").text();
-        let customerSalary = $(this).children(":eq(3)").text();
+        let customerId = $(this).children(":eq(0)").text();
+        let customerName = $(this).children(":eq(1)").text();
+        let customerAge = $(this).children(":eq(2)").text();
+        let customerTp = $(this).children(":eq(3)").text();
 
         //set vales for the input fields
-        $("#inputCname").val(customerName);
-        $("#inputCage").val(customerAge);
-        $("#inputTp").val(customerTp);
-        $("#inputSalary").val(customerSalary);
+        $("#inputCname").val(customerId);
+        $("#inputCage").val(customerName);
+        $("#inputTp").val(customerAge);
+        $("#inputSalary").val(customerTp);
     });
 
     //remove row
@@ -56,6 +66,10 @@ $("#inputTp").keydown(function (event) {
         $("#inputSalary").focus();
     }
 });
+
+
+
+
 
 
 /*item*/
