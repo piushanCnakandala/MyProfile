@@ -18,10 +18,8 @@ $("#addCust").click(function () {
 
     };
     customerDB.push(customerOB);
+    loadAllCustomer();
 
-//input data to table
-    let raw = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAge}</td><td>${customerTp}</td></tr>`
-    $("#customerTable").append(raw);
 
 //clear input text fiels
 $("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
@@ -66,6 +64,18 @@ $("#inputTp").keydown(function (event) {
         $("#inputSalary").focus();
     }
 });
+
+
+function loadAllCustomer(){
+    $("#customerTable").empty();
+for(var i of customerDB){
+    let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.age}</td><td>${i.tp}</td></tr>`
+    $("#customerTable").append(raw);
+}
+}
+
+//input data to table
+
 
 
 
