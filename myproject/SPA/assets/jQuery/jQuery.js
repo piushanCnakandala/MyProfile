@@ -19,13 +19,6 @@ $("#addCust").click(function () {
     };
     customerDB.push(customerOB);
     loadAllCustomer();
-
-/*
-
-//clear input text fiels
-$("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
-*/
-
     clearFields();
 
 //return data to the text fields
@@ -115,42 +108,58 @@ function clearFields(){
 
 
 /*item*/
+
 //input data to text fields
 $("#addItem").click(function () {
 
     $("#itemTable>tr").off("click"); //of click events
 
-    let itemName = $("#inputItemName").val();
-    let itemPrice = $("#inputPrice").val();
+    let itemId = $("#inputItemName").val();
+    let itemName = $("#inputPrice").val();
     let itemQuantity = $("#inputQuantity").val();
-    let price = $("#inputData").val();
+    let itemPrice= $("#inputData").val();
 
-//input data to table
-    let raw = `<tr><td>${itemName}</td><td>${itemPrice}</td><td>${itemQuantity}</td><td>${price}</td></tr>`
-    $("#itemTable").append(raw);
+    //input data to array
+    var itemOB={
+        id:itemId,
+        name:itemName,
+        qty:itemQuantity,
+        price:itemPrice
 
-//clear input text fiels
-    $("#inputItemName,#inputPrice,#inputQuantity,#inputData").val("");
+    };
+    itemDB.push(itemOB);
+    loadAllItems();
+    clearInputItemFields()
 
 //return data to the text fields
     $("#itemTable>tr").click(function () {
 
-        let itemName = $(this).children(":eq(0)").text();
-        let itemPrice = $(this).children(":eq(1)").text();
+        let itemId = $(this).children(":eq(0)").text();
+        let itemName = $(this).children(":eq(1)").text();
         let itemQuantity = $(this).children(":eq(2)").text();
-        let price = $(this).children(":eq(3)").text();
+        let itemPrice = $(this).children(":eq(3)").text();
 
 
         //set vales for the input fields
-        $("#inputItemName").val(itemName);
-        $("#inputPrice").val(itemPrice);
+        $("#inputItemName").val(itemId);
+        $("#inputPrice").val(itemName);
         $("#inputQuantity").val(itemQuantity);
-        $("#inputData").val(price);
+        $("#inputData").val(itemPrice);
 
     });
 
 
 });
+
+//input data to table
+function loadAllItems(){
+    $("#itemTable").empty();
+    for(var i of itemDB){
+        let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td></tr>`
+        $("#itemTable").append(raw);
+    }
+}
+
 //text fields focusing
 $("#inputItemName").keydown(function (event) {
     if (event.key == "Enter") {
@@ -169,3 +178,7 @@ $("#inputQuantity").keydown(function (event) {
         $("#inputData").focus();
     }
 });
+
+function clearInputItemFields(){
+    $("#inputItemName,#inputPrice,#inputQuantity,#inputData").val("");
+}
