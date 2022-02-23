@@ -179,6 +179,36 @@ $("#inputQuantity").keydown(function (event) {
     }
 });
 
+//search Item
+
+$("#btnSearchItem").click(function (){
+    var searchId=$("#txtItemSearch").val();
+    var response=searchItem(searchId);
+    if(response){
+        $("#inputItemName").val(response.id);
+        $("#inputPrice").val(response.name);
+        $("#inputQuantity").val(response.qty);
+        $("#inputData").val(response.price);
+
+    }else {
+        clearFields();
+        alert("no such a Item");
+
+    }
+});
+
+function searchItem(id){
+    for(let i =0;i<itemDB.length;i++){
+        if(itemDB[i].id==id){
+            return itemDB[i];
+
+        }
+
+    }
+}
+
+
+
 function clearInputItemFields(){
     $("#inputItemName,#inputPrice,#inputQuantity,#inputData").val("");
 }
