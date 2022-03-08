@@ -66,10 +66,16 @@ $("#customerUpdate").click(function (){
     }
 });
 
+// End CRUD Operations
 
-//text fields focusing
+//btn clear
 
-$("#inputCId").keydown(function (event) {
+ $("#clearField").click(function (){
+     clearFields();
+ });
+
+
+$("#inputCId").keydown(function (event) {  //text fields focusing
     if (event.key == "Enter") {
         $("#inputCName").focus();
     }
@@ -87,14 +93,15 @@ $("#inputCAge").keydown(function (event) {
     }
 });
 
-//input data to table
-function loadAllCustomer(){
+
+function loadAllCustomer(){ //input data to table
     $("#customerTable").empty();
 for(var i of customerDB){
     let raw = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAge()}</td><td>${i.getCustomerTp()}</td></tr>`
     $("#customerTable").append(raw);
 }
 }
+
 
 //search customer
 
@@ -124,7 +131,7 @@ function searchCustomer(id){
     }
 }
 
-//clear input text fiels
+
 function clearFields(){
     $("#inputCName,#inputCAge,#inputCTp,#inputCId").val("");
 }

@@ -1,30 +1,34 @@
 // CRUD Operations
 
 
-//input data to text fields
+  //item add
+
 $("#addItem").click(function () {
 
-    $("#itemTable>tr").off("click"); //of click events
+    $("#itemTable>tr").off("click");
 
     let itemId = $("#inputItemId").val();
     let itemName = $("#inputItemName").val();
     let itemQuantity = $("#inputQuantity").val();
     let itemPrice= $("#inputItemPrice").val();
 
-    //input data to array
-    var itemOB={
+
+   /* var itemOB={
         id:itemId,
         name:itemName,
         qty:itemQuantity,
         price:itemPrice
 
-    };
+    };*/
+
+    var itemOB=new ItemDTO(itemId,itemName,itemQuantity,itemPrice);
+
     itemDB.push(itemOB);
     loadAllItems();
     clearInputItemFields()
 
-//return data to the text fields
-    $("#itemTable>tr").click(function () {
+
+    $("#itemTable>tr").click(function () {  //return data to the text fields
 
         let itemId = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
@@ -32,8 +36,7 @@ $("#addItem").click(function () {
         let itemPrice = $(this).children(":eq(3)").text();
 
 
-        //set vales for the input fields
-        $("#inputItemId").val(itemId);
+        $("#inputItemId").val(itemId);    //set vales for the input fields
         $("#inputItemName").val(itemName);
         $("#inputQuantity").val(itemQuantity);
         $("#inputItemPrice").val(itemPrice);
@@ -43,17 +46,38 @@ $("#addItem").click(function () {
 
 });
 
-//input data to table
-function loadAllItems(){
+
+//item Update
+
+$("#btnUpdate").click(function (){
+    let itemId = $("#inputItemId").val();
+    let itemName = $("#inputItemName").val();
+    let itemQuantity = $("#inputQuantity").val();
+    let itemPrice= $("#inputItemPrice").val();
+
+    for (var i=0;i<itemDB.length;i++){
+       itemDB[i].setItemId(itemId);
+        itemDB[i].setItemName(itemName);
+        itemDB[i].setItemQty(itemQuantity);
+        itemDB[i].setItemPrice(itemPrice);
+
+        loadAllItems();
+    }
+});
+
+
+// End CRUD Operations
+
+function loadAllItems(){ //input data to table
     $("#itemTable").empty();
     for(var i of itemDB){
-        let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.qty}</td><td>${i.price}</td></tr>`
+        let raw = `<tr><td>${i.getItemId()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td></tr>`
         $("#itemTable").append(raw);
     }
 }
 
-//text fields focusing
-$("#inputItemId").keydown(function (event) {
+
+$("#inputItemId").keydown(function (event) { //text fields focusing
     if (event.key == "Enter") {
         $("#inputItemName").focus();
     }
@@ -71,7 +95,7 @@ $("#inputQuantity").keydown(function (event) {
     }
 });
 
-//search Item
+   //search Item
 
 $("#btnSearchItem").click(function (){
     var searchId=$("#txtItemSearch").val();
@@ -99,9 +123,12 @@ function searchItem(id){
     }
 }
 
+$("#btnClear").click(function (){
+    clearFields();
+});
 
 
-function clearInputItemFields(){
+function clearInputItemFields(){    //clear input text fiels
     $("#inputItemName,#inputItemId,#inputQuantity,#inputItemPrice").val("");
 }
 
