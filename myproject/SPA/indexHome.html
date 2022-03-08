@@ -74,23 +74,23 @@
                             <div class="row">
                                 <div class="col">
                                     <label   class="form-label fw-bold" for="itemName">Customer ID:</label>
-                                    <input  id="inputCname" class="form-control" id="customerSalary" placeholder="" type="">
+                                    <input  id="inputCId" class="form-control" id="customerSalary" placeholder="" type="">
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label class="form-label fw-bold" for="itemName">Customer Name:</label>
-                                    <input id="inputCage" class="form-control" id=customerName" placeholder="" type="">
+                                    <input id="inputCName" class="form-control" id=customerName" placeholder="" type="">
                                 </div>
                             </div>
                             <div class="row mt-3">
 
                                 <div class="col">
                                     <label class="form-label fw-bold" for="qtyOnHand">Age:</label>
-                                    <input  id="inputTp"class="form-control" id="age" placeholder="" type="">
+                                    <input  id="inputCAge"class="form-control" id="age" placeholder="" type="">
                                 </div>
                                 <div class="col">
                                     <label class="form-label fw-bold" for="price">Tp:</label>
-                                    <input id="inputSalary" class="form-control" id="tp" placeholder="" type="">
+                                    <input id="inputCTp" class="form-control" id="tp" placeholder="" type="">
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
            <!--buttons add,clear,delete-->
             <div class="col-12 g-5 ">
                 <button id="customerDelete" class="btn btn-danger" type="button">Delete</button>
-                <button class="btn btn-dark" type="button"> Update</button>
+                <button id="customerUpdate" class="btn btn-dark" type="button"> Update</button>
                 <button class="btn btn-success" type="button">Clear</button>
                 <button id="addCust" class="btn btn-success" type="button">Add Customer</button>
             </div>
@@ -373,6 +373,7 @@
 <script src="controller/customerController.js"></script>
 <script src="controller/itemController.js"></script>
 <script src="controller/orderController.js"></script>
+<script src="model/CustomerDTO.js"></script>
 
 <script src="assets/js/script.js"></script>
 <script src="db/DB.js"></script>

@@ -1,63 +1,89 @@
 // CRUD Operations
 
-//input data to text fields
-$("#addCust").click(function () {
-    $("#customerTable>tr").off("click"); //of click events
+//customer add
 
-    let customerId = $("#inputCname").val();
-    let customerName = $("#inputCage").val();
-    let customerAge = $("#inputTp").val();
-    let customerTp = $("#inputSalary").val();
+    $("#addCust").click(function () {
+        $("#customerTable>tr").off("click");
 
-   //input data to array
-    var customerOB={
-        id:customerId,
-        name:customerName,
-        age:customerAge,
-        tp:customerTp
+        let customerId = $("#inputCId").val();
+        let customerName = $("#inputCName").val();
+        let customerAge = $("#inputCAge").val();
+        let customerTp = $("#inputCTp").val();
 
-    };
-    customerDB.push(customerOB);
-    loadAllCustomer();
-    clearFields();
 
-//return data to the text fields
-    $("#customerTable>tr").click(function () {
-        let customerId = $(this).children(":eq(0)").text();
-        let customerName = $(this).children(":eq(1)").text();
-        let customerAge = $(this).children(":eq(2)").text();
-        let customerTp = $(this).children(":eq(3)").text();
+        /*var customerOB = {   //input data to array
+            id: customerId,
+            name: customerName,
+            age: customerAge,
+            tp: customerTp
 
-        //set vales for the input fields
-        $("#inputCname").val(customerId);
-        $("#inputCage").val(customerName);
-        $("#inputTp").val(customerAge);
-        $("#inputSalary").val(customerTp);
+        };*/
+
+         var customerOB= new CustomerDTO(customerId,customerName,customerAge,customerTp);
+
+        customerDB.push(customerOB);
+        loadAllCustomer();
+        clearFields();
+
+
+        $("#customerTable>tr").click(function () {  //return data to the text fields
+            let customerId = $(this).children(":eq(0)").text();
+            let customerName = $(this).children(":eq(1)").text();
+            let customerAge = $(this).children(":eq(2)").text();
+            let customerTp = $(this).children(":eq(3)").text();
+
+            $("#inputCId").val(customerId); //set vales for the input fields
+            $("#inputCName").val(customerName);
+            $("#inputCAge").val(customerAge);
+            $("#inputCTp").val(customerTp);
+        });
+
     });
 
-    //remove row
-    $("#customerDelete").click(function () {
-        $(tr>this).remove();
-    });
+//customer delete
 
+$("#customerDelete").click(function () {
+    $(tr>this).remove();
 });
+
+
+
+//customer Update
+
+$("#customerUpdate").click(function (){
+    let customerId = $("#inputCId").val();
+    let customerName = $("#inputCName").val();
+    let customerAge = $("#inputCAge").val();
+    let customerTp = $("#inputCTp").val();
+
+    for (var i = 0; i < customerDB.length; i++) {
+
+            customerDB[i].setCustomerId(customerId);
+            customerDB[i].setCustomerName(customerName);
+            customerDB[i].setCustomerAge(customerAge);
+            customerDB[i].setCustomerTp(customerTp);
+            loadAllCustomer();
+    }
+});
+
 
 //text fields focusing
-$("#inputCname").keydown(function (event) {
+
+$("#inputCId").keydown(function (event) {
     if (event.key == "Enter") {
-        $("#inputCage").focus();
+        $("#inputCName").focus();
     }
 });
 
-$("#inputCage").keydown(function (event) {
+$("#inputCName").keydown(function (event) {
     if (event.key == "Enter") {
-        $("#inputTp").focus();
+        $("#inputCAge").focus();
     }
 });
 
-$("#inputTp").keydown(function (event) {
+$("#inputCAge").keydown(function (event) {
     if (event.key == "Enter") {
-        $("#inputSalary").focus();
+        $("#inputCTp").focus();
     }
 });
 
@@ -65,7 +91,7 @@ $("#inputTp").keydown(function (event) {
 function loadAllCustomer(){
     $("#customerTable").empty();
 for(var i of customerDB){
-    let raw = `<tr><td>${i.id}</td><td>${i.name}</td><td>${i.age}</td><td>${i.tp}</td></tr>`
+    let raw = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAge()}</td><td>${i.getCustomerTp()}</td></tr>`
     $("#customerTable").append(raw);
 }
 }
@@ -76,10 +102,10 @@ $("#btnCustomerSearch").click(function (){
 var searchId=$("#txtCustomerSearch").val();
 var response=searchCustomer(searchId);
 if(response){
-    $("#inputCname").val(response.id);
-    $("#inputCage").val(response.name);
-    $("#inputTp").val(response.age);
-    $("#inputSalary").val(response.tp);
+    $("#inputCId").val(response.id);
+    $("#inputCName").val(response.name);
+    $("#inputCAge").val(response.age);
+    $("#inputCTp").val(response.tp);
 
 }else {
     clearFields();
@@ -100,7 +126,7 @@ function searchCustomer(id){
 
 //clear input text fiels
 function clearFields(){
-    $("#inputCname,#inputCage,#inputTp,#inputSalary").val("");
+    $("#inputCName,#inputCAge,#inputCTp,#inputCId").val("");
 }
 
 
