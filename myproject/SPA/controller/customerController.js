@@ -1,4 +1,4 @@
-// CRUD Operations
+            //--------------- CRUD Operations-----------------//
 
 //customer add
 
@@ -68,7 +68,7 @@ $("#customerUpdate").click(function (){
     }
 });
 
-// End CRUD Operations
+              // ----------End CRUD Operations------------------------//
 
 //btn clear
 

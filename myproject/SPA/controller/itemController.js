@@ -30,6 +30,23 @@ $("#addItem").click(function () {
 });
 
 
+//item Delete
+
+function deleteItem(){
+
+    $("#btnDelete").click(function () {
+        let itemId = $("#inputItemId").val();
+        for (let i=0;i< itemDB.length;i++){
+            if (itemDB[i].getItemId()==itemId){
+                itemDB.splice(i,1);
+            }
+        }
+        loadAllItems();
+        clearInputItemFields();
+
+    });
+}
+
 //item Update
 
 $("#btnItemUpdate").click(function (){
@@ -53,7 +70,7 @@ $("#btnItemUpdate").click(function (){
 });
 
 
-// End CRUD Operations
+            // ----------End CRUD Operations
 
 //btn clear
 
@@ -67,6 +84,7 @@ function loadAllItems(){ //input data to table
         let raw = `<tr><td>${i.getItemId()}</td><td>${i.getItemName()}</td><td>${i.getItemQty()}</td><td>${i.getItemPrice()}</td></tr>`
         $("#itemTable").append(raw);
         bindItemRow();
+        deleteItem();
 
     }
 }
