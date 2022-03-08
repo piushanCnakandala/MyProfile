@@ -25,26 +25,25 @@
         loadAllCustomer();
         clearFields();
 
-
-        $("#customerTable>tr").click(function () {  //return data to the text fields
-            let customerId = $(this).children(":eq(0)").text();
-            let customerName = $(this).children(":eq(1)").text();
-            let customerAge = $(this).children(":eq(2)").text();
-            let customerTp = $(this).children(":eq(3)").text();
-
-            $("#inputCId").val(customerId); //set vales for the input fields
-            $("#inputCName").val(customerName);
-            $("#inputCAge").val(customerAge);
-            $("#inputCTp").val(customerTp);
-        });
-
     });
 
 //customer delete
 
-$("#customerDelete").click(function () {
-    $(tr>this).remove();
-});
+
+function deleteCustomer(){
+
+    $("#customerDelete").click(function () {
+        let customerId = $("#inputCId").val();
+       for (let i=0;i< customerDB.length;i++){
+           if (customerDB[i].getCustomerId()==customerId){
+               customerDB.splice(i,1);
+           }
+       }
+loadAllCustomer();
+       clearFields();
+    });
+}
+
 
 
 
@@ -57,12 +56,15 @@ $("#customerUpdate").click(function (){
     let customerTp = $("#inputCTp").val();
 
     for (var i = 0; i < customerDB.length; i++) {
+            if (customerDB[i].getCustomerId()==customerId){
 
-            customerDB[i].setCustomerId(customerId);
-            customerDB[i].setCustomerName(customerName);
-            customerDB[i].setCustomerAge(customerAge);
-            customerDB[i].setCustomerTp(customerTp);
-            loadAllCustomer();
+                customerDB[i].setCustomerName(customerName);
+                customerDB[i].setCustomerAge(customerAge);
+                customerDB[i].setCustomerTp(customerTp);
+                loadAllCustomer();
+                clearFields();
+                $("#btnUpdate").prop('disabled', true);
+            }
     }
 });
 
@@ -99,6 +101,8 @@ function loadAllCustomer(){ //input data to table
 for(var i of customerDB){
     let raw = `<tr><td>${i.getCustomerId()}</td><td>${i.getCustomerName()}</td><td>${i.getCustomerAge()}</td><td>${i.getCustomerTp()}</td></tr>`
     $("#customerTable").append(raw);
+    bindCustomer();
+    deleteCustomer();
 }
 }
 
@@ -109,10 +113,10 @@ $("#btnCustomerSearch").click(function (){
 var searchId=$("#txtCustomerSearch").val();
 var response=searchCustomer(searchId);
 if(response){
-    $("#inputCId").val(response.id);
-    $("#inputCName").val(response.name);
-    $("#inputCAge").val(response.age);
-    $("#inputCTp").val(response.tp);
+    $("#inputCId").val(response.getCustomerId());
+    $("#inputCName").val(response.getCustomerName());
+    $("#inputCAge").val(response.getCustomerAge());
+    $("#inputCTp").val(response.getCustomerTp());
 
 }else {
     clearFields();
@@ -123,7 +127,7 @@ if(response){
 
 function searchCustomer(id){
     for(let i =0;i<customerDB.length;i++){
-        if(customerDB[i].id==id){
+        if(customerDB[i].getCustomerId()==id){
             return customerDB[i];
 
         }
@@ -131,6 +135,19 @@ function searchCustomer(id){
     }
 }
 
+function bindCustomer(){
+    $("#customerTable>tr").click(function () {  //return data to the text fields
+        let customerId = $(this).children(":eq(0)").text();
+        let customerName = $(this).children(":eq(1)").text();
+        let customerAge = $(this).children(":eq(2)").text();
+        let customerTp = $(this).children(":eq(3)").text();
+
+        $("#inputCId").val(customerId); //set vales for the input fields
+        $("#inputCName").val(customerName);
+        $("#inputCAge").val(customerAge);
+        $("#inputCTp").val(customerTp);
+    });
+}
 
 function clearFields(){
     $("#inputCName,#inputCAge,#inputCTp,#inputCId").val("");
