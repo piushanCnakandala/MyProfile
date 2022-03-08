@@ -6,10 +6,10 @@ $("#addItem").click(function () {
 
     $("#itemTable>tr").off("click"); //of click events
 
-    let itemId = $("#inputItemName").val();
-    let itemName = $("#inputPrice").val();
+    let itemId = $("#inputItemId").val();
+    let itemName = $("#inputItemName").val();
     let itemQuantity = $("#inputQuantity").val();
-    let itemPrice= $("#inputData").val();
+    let itemPrice= $("#inputItemPrice").val();
 
     //input data to array
     var itemOB={
@@ -33,10 +33,10 @@ $("#addItem").click(function () {
 
 
         //set vales for the input fields
-        $("#inputItemName").val(itemId);
-        $("#inputPrice").val(itemName);
+        $("#inputItemId").val(itemId);
+        $("#inputItemName").val(itemName);
         $("#inputQuantity").val(itemQuantity);
-        $("#inputData").val(itemPrice);
+        $("#inputItemPrice").val(itemPrice);
 
     });
 
@@ -53,13 +53,13 @@ function loadAllItems(){
 }
 
 //text fields focusing
-$("#inputItemName").keydown(function (event) {
+$("#inputItemId").keydown(function (event) {
     if (event.key == "Enter") {
-        $("#inputPrice").focus();
+        $("#inputItemName").focus();
     }
 });
 
-$("#inputPrice").keydown(function (event) {
+$("#inputItemName").keydown(function (event) {
     if (event.key == "Enter") {
         $("#inputQuantity").focus();
     }
@@ -67,7 +67,7 @@ $("#inputPrice").keydown(function (event) {
 
 $("#inputQuantity").keydown(function (event) {
     if (event.key == "Enter") {
-        $("#inputData").focus();
+        $("#inputItemPrice").focus();
     }
 });
 
@@ -77,10 +77,10 @@ $("#btnSearchItem").click(function (){
     var searchId=$("#txtItemSearch").val();
     var response=searchItem(searchId);
     if(response){
-        $("#inputItemName").val(response.id);
-        $("#inputPrice").val(response.name);
+        $("#inputItemId").val(response.id);
+        $("#inputItemName").val(response.name);
         $("#inputQuantity").val(response.qty);
-        $("#inputData").val(response.price);
+        $("#inputItemPrice").val(response.price);
 
     }else {
         clearFields();
@@ -102,7 +102,7 @@ function searchItem(id){
 
 
 function clearInputItemFields(){
-    $("#inputItemName,#inputPrice,#inputQuantity,#inputData").val("");
+    $("#inputItemName,#inputItemId,#inputQuantity,#inputItemPrice").val("");
 }
 
 

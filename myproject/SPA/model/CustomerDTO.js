@@ -4,25 +4,25 @@ function CustomerDTO(id,name,age,tp){
     var age=age;
     var tp=tp;
 
-    this.setCustometrId =function (id){
+    this.setCustomerId =function (id){
         id=id;
     }
     this.getCustomerId =function (){
         return id;
     }
-    this.setCustometrName =function (name){
+    this.setCustomerName =function (name){
         name=name;
     }
     this.getCustomerName =function (){
         return name;
     }
-    this.setCustometrAge =function (age){
+    this.setCustomerAge =function (age){
         age=age;
     }
-    this.getCustomerage =function (){
+    this.getCustomerAge =function (){
         return age;
     }
-    this.setCustometrTp =function (tp){
+    this.setCustomerTp =function (tp){
         tp=tp;
     }
     this.getCustomerTp =function (){
