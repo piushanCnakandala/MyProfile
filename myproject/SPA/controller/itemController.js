@@ -64,7 +64,6 @@ $("#btnItemUpdate").click(function (){
 
             loadAllItems();
             clearFields();
-            $("#btnItemUpdate").prop('disabled', true);
         }
     }
 });
@@ -162,6 +161,29 @@ function clearInputItemFields(){    //clear input text fiels
     $("#inputItemName,#inputItemId,#inputQuantity,#inputItemPrice").val("");
 }
 
+
+function generateItemId() {
+
+    let index = itemDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = itemDB[itemDB.length - 1].getCustomerId();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#inputCId").val("I00-001");
+    } else if (temp <= 9) {
+        $("#inputCId").val("I00-00" + temp);
+    } else if (temp <= 99) {
+        $("#inputCId").val("I00-0" + temp);
+    } else {
+        $("#inputCId").val("I00-" + temp);
+    }
+
+}
 
 
 // Validations

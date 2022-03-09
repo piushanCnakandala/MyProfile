@@ -1,5 +1,5 @@
             //--------------- CRUD Operations-----------------//
-
+generateCustomerId();
 //customer add
 
     $("#addCust").click(function () {
@@ -23,7 +23,9 @@
 
         customerDB.push(customerOB);
         loadAllCustomer();
+
         clearFields();
+        generateCustomerId();
 
     });
 
@@ -41,6 +43,7 @@ function deleteCustomer(){
        }
 loadAllCustomer();
        clearFields();
+       generateCustomerId();
     });
 }
 
@@ -63,6 +66,7 @@ $("#customerUpdate").click(function (){
                 customerDB[i].setCustomerTp(customerTp);
                 loadAllCustomer();
                 clearFields();
+                generateCustomerId();
                 $("#btnUpdate").prop('disabled', true);
             }
     }
@@ -154,6 +158,29 @@ function clearFields(){
 }
 
 
-// Validations
+function generateCustomerId() {
 
+    let index = customerDB.length - 1;
+    let id;
+    let temp;
+    if (index != -1) {
+        id = customerDB[customerDB.length - 1].getCustomerId();
+        temp = id.split("-")[1];
+        temp++;
+    }
+
+    if (index == -1) {
+        $("#inputCId").val("C00-001");
+    } else if (temp <= 9) {
+        $("#inputCId").val("C00-00" + temp);
+    } else if (temp <= 99) {
+        $("#inputCId").val("C00-0" + temp);
+    } else {
+        $("#inputCId").val("C00-" + temp);
+    }
+
+}
+
+
+// Validations
 
