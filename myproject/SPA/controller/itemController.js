@@ -2,6 +2,7 @@
 
 
   //item add
+generateItemId();
 
 $("#addItem").click(function () {
 
@@ -25,7 +26,8 @@ $("#addItem").click(function () {
 
     itemDB.push(itemOB);
     loadAllItems();
-    clearInputItemFields()
+    clearInputItemFields();
+    generateItemId();
 
 });
 
@@ -43,6 +45,7 @@ function deleteItem(){
         }
         loadAllItems();
         clearInputItemFields();
+        generateItemId();
 
     });
 }
@@ -64,6 +67,7 @@ $("#btnItemUpdate").click(function (){
 
             loadAllItems();
             clearFields();
+            generateItemId();
         }
     }
 });
@@ -168,19 +172,19 @@ function generateItemId() {
     let id;
     let temp;
     if (index != -1) {
-        id = itemDB[itemDB.length - 1].getCustomerId();
+        id = itemDB[itemDB.length - 1].getItemId();
         temp = id.split("-")[1];
         temp++;
     }
 
     if (index == -1) {
-        $("#inputCId").val("I00-001");
+        $("#inputItemId").val("I00-001");
     } else if (temp <= 9) {
-        $("#inputCId").val("I00-00" + temp);
+        $("#inputItemId").val("I00-00" + temp);
     } else if (temp <= 99) {
-        $("#inputCId").val("I00-0" + temp);
+        $("#inputItemId").val("I00-0" + temp);
     } else {
-        $("#inputCId").val("I00-" + temp);
+        $("#inputItemId").val("I00-" + temp);
     }
 
 }
