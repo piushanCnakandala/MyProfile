@@ -68,7 +68,7 @@ $("#customerUpdate").click(function (){
                 loadAllCustomer();
                 clearFields();
                 generateCustomerId();
-                $("#btnUpdate").prop('disabled', true);
+                /*$("#btnUpdate").prop('disabled', true);*/
             }
     }
 });

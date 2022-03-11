@@ -1,8 +1,7 @@
 // CRUD Operations
-
-
-  //item add
 generateItemId();
+
+//item add
 
 $("#addItem").click(function () {
 
@@ -28,6 +27,7 @@ $("#addItem").click(function () {
     loadAllItems();
     clearInputItemFields();
     generateItemId();
+    loadAllItemIds();
 
 });
 

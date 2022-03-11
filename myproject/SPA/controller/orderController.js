@@ -1,9 +1,16 @@
 
+//////////////-load customer and item ids /////////////////////////////////////
 
 $("#idCustCmb").change(function (e){
     let selectedCustomerId =$('#idCustCmb').find(":selected").text();
     selectedCustomer(selectedCustomerId);
-})
+});
+
+
+$("#idItemCmb").change(function (e){
+    let selectedItemId =$('#idItemCmb').find(":selected").text();
+    selectedItem(selectedItemId);
+});
 
              /* load customer ids to cmb (customer)*/
 function loadAllCustomerIds() {
@@ -26,6 +33,32 @@ function selectedCustomer(CustomerId){
             $("#txtcusName").val(element.getCustomerName());
             $("#txtAge").val(element.getCustomerAge());
             $("#txtTp").val(element.getCustomerTp());
+        }
+    }
+}
+
+
+/* load item ids to cmb (item)*/
+function loadAllItemIds() {
+    $("#idItemCmb").empty();
+
+    let itemHint=`<option disabled selected> Select Item ID</option>`;
+
+    $("#idItemCmb").append(itemHint);
+
+    for (let i in itemDB) {
+        let option = `<option value="${itemDB[i].getItemId()}">${itemDB[i].getItemId()}</option>`
+        $("#idItemCmb").append(option);
+    }
+}
+/*load item data to text fields*/
+function selectedItem(ItemId){
+    for (const i in itemDB){
+        if (itemDB[i].getItemId()==ItemId) {
+            let element = itemDB[i];
+            $("#txtitemName").val(element.getItemName());
+            $("#txtqtyOnHand").val(element.getItemQty());
+            $("#txtprice").val(element.getItemPrice());
         }
     }
 }
