@@ -26,6 +26,7 @@ generateCustomerId();
 
         clearFields();
         generateCustomerId();
+        loadAllCustomerIds();
 
     });
 
