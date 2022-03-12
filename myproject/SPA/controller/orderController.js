@@ -1,4 +1,7 @@
 
+generateOrderId();
+setDate();
+
 //////////////-load customer and item ids /////////////////////////////////////
 
 $("#idCustCmb").change(function (e){
@@ -64,29 +67,39 @@ function selectedItem(ItemId){
 }
 ////////////////////////////////////////////////////////////////////////////////////////
 
+//generate order Id
 
-
-
-
-/*function generateOrderId() {
+function generateOrderId() {
 
     let index = orderDb.length - 1;
     let id;
     let temp;
     if (index != -1) {
-        id = orderDb[orderDb.length - 1].getItemId();
+        id = orderDb[orderDb.length - 1].getOrderId();
         temp = id.split("-")[1];
         temp++;
     }
 
     if (index == -1) {
-        $("#inputItemId").val("I00-001");
+        $("#oIdItxt").val("O00-001");
     } else if (temp <= 9) {
-        $("#inputItemId").val("I00-00" + temp);
+        $("#oIdItxt").val("O00-00" + temp);
     } else if (temp <= 99) {
-        $("#inputItemId").val("I00-0" + temp);
+        $("#oIdItxt").val("O00-0" + temp);
     } else {
-        $("#inputItemId").val("I00-" + temp);
+        $("#oIdItxt").val("O00-" + temp);
     }
 
-}*/
+}
+
+//set date
+
+function setDate() {
+    let d = new Date();
+    let dd = d.toISOString().split("T")[0].split("-");
+    $("#txtDate").val(dd[0]+"-"+dd[1]+"-"+dd[2]);
+    $("#txtDate").text(dd[0]+"-"+dd[1]+"-"+dd[2]);
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+}
