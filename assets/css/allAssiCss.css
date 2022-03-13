@@ -1,0 +1,57 @@
+.box{
+    width: 1350px;
+    height: 500px;
+    background: #565656;
+    position: absolute;
+    justify-content: center;
+    left: 80px;
+    border-radius: 40px;
+    opacity: 10%;
+}
+.assiBox{
+    position:relative;
+    display: flex;
+    width: 1220px;
+    height: 400px;
+    justify-content:space-between;
+    left: 10px;
+    right: 400px;
+    margin: auto;
+    top: 143px;
+}
+
+.assiImg{
+    position: relative;
+    height: 171px;
+    border-radius: 15px;
+}
+
+#tropicCcc{
+    font-size: 25px;
+    top: -62px;
+    right: 400px;
+    left: 262px;
+    position: relative;
+}
+
+#bootsratp{
+    font-size: 25px;
+    top: -112px;
+    right: 400px;
+    left: 632px;
+    position: relative;
+}
+
+#spa{
+    font-size: 25px;
+    top: -182px;
+    right: 400px;
+    left: 1142px;
+    position: relative;
+}
+.title{
+    font-size: 40px;
+    right: 400px;
+    left: 632px;
+    position: relative;
+}

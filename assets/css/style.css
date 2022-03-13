@@ -66,6 +66,7 @@ Ubuntu,Cantarell,"Open Sans","Helvetica Neue",SansSerif;
 }
 
            /*-------home page creating---------*/
+
 main>section:nth-child(1){
     height: 100vh;
     position: relative;
@@ -275,6 +276,8 @@ main>section:nth-child(2)>div:nth-child(6){
     background: black;
 }
 
+
+
 /*--------------activities-------------*/
 .box{
     width: 1350px;
@@ -421,6 +424,24 @@ main>section:nth-child(4)>div:nth-child(2):hover{
     transform: rotate(-360deg);
     transition: all 3s;
 }
+
+/*Assigment*/
+
+.assiImg{
+    position: relative;
+    height: 337px;
+    border-radius: 15px;
+}
+
+#see\ all\ assi{
+    position: absolute;
+    left: 654px;
+    top: 533px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: darkolivegreen;
+}
+
 
 .chatBox{
     width: 550px;
